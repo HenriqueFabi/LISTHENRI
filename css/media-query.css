@@ -1,0 +1,90 @@
+/*menu*/
+@media (max-width: 800px){
+    /*menu*/
+    .menu-2{
+        justify-content: left;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .menu-2 li{
+        margin: 1rem 1rem 0 0;
+    }
+    .menu-nav{
+        display: block;
+    }
+    /*conteudo-principal*/
+    .criar-tarefa{
+        margin: 1rem 0 0 1rem;          
+    }
+    /*table*/
+    .tabela-tarefas{
+        margin-left: 1rem;
+        width: 100%;
+     }
+     .tabela-cabecalho{
+        display: none;
+     }
+     .tabela-tarefas tr{
+        border-bottom: 2px solid rgb(224, 55, 55);
+     }
+     .tabela-tarefas td{
+        display: block;
+        text-align: right;
+        border-bottom: 1px dotted rgb(224, 221, 221);
+        margin-left: 1rem;
+     }
+     .tabela-tarefas td:before{
+        content:  attr(data-label);
+        float: left;
+     }
+    /*footer*/
+    .div-logo{
+        margin-right: 1rem;
+    }
+    footer p{
+        max-width: 30%;
+    }
+    .logo{
+        margin: 0;
+    }
+}
+@media (max-width: 600px){
+    .div-form1{
+        width: 80%;
+    }
+    #todolist input{
+        width: 100%;
+    }
+}
+@media (max-width: 450px){
+    /*menu*/
+    .div-search{
+        position: relative;
+        margin-left: 0;
+    }
+    .menu-2{
+        display: block;
+        margin-top: 3rem;
+    }
+     /*menu lateral*/
+     .link-menu-lateral span{
+        margin-left: .3rem;       
+    }
+    .icon-menu{
+        display: none;
+    }
+    .link-menu-lateral{
+        display: block;
+        text-align: center;
+    }
+    .menu-lateral.ativo{
+        display: none;
+        animation: none;
+    }
+    /*modal*/
+    .modal{
+        width: 60%;
+        left: 10%;
+
+    }
+}

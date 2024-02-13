@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="lista de tarefas, mais conhecida por todolist. Projeto feito por Fabio Henrique">
+    <meta name="keywords" content="app lista de tarefas,Fabio Henrique">
+    <meta name="author" content="Fabio Henrique">
+    <link rel="icon" href="./imagens/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tarefas - ToDoList</title>
+</head>
+<body>
+    <nav class="menu-nav">
+        <ul class="menu-1">
+            <li class="li-menu"><img class="icon-menu" src="./imagens/menu.png" alt="menu"></li>
+            <li>
+                <div class="div-search">
+                    <form name="form1">
+                        <input type="text" placeholder="Buscar pela Descrição" name="buscar" id="buscar">
+                    </form>
+                    <img class="icon-search" src="./imagens/search.png" alt="lupa buscar">
+                </div>
+                <div class="div-results resultado">
+                    <div class="results resultado">
+                        <!-- <div class="show-results">
+                            <span class="span-results"><span class="title">Descrição</span>: Teste 2</span>
+                            <span class="span-results"><span class="title">Data</span>: 21/01/2023</span>
+                            <span class="span-results"><span class="title">Tipo</span>: Rotina</span>
+                            <span class="span-results"><span class="title">Status</span>: Pendente</span>
+                        </div>   -->  
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="menu-2">
+            <li><img class="icon-darkmode" src="./imagens/dark-mode.png" alt="modo escuro"></li>
+            <li><a href="" class="btn-menu" target="_blank">Portfolio</a></li>
+            <li><a href="" class="btn-menu" target="_blank">Linkedin</a></li>
+            <li><a href="" class="btn-menu" target="_blank">Github</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="menu-lateral">
+            <ul class="ul-menu-lateral">
+                <li>
+                    <a class="link-menu-lateral" href="#criar-tarefa">
+                            <img class="hoje" src="./imagens/calendario-hoje.png">
+                        <span>Hoje</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link-menu-lateral" href="#criar-tarefa">
+                            <img class="rotina" src="./imagens/rotina-liquidificador.png">
+                        <span>Rotina</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link-menu-lateral" href="#criar-tarefa">
+                            <img class="pessoal" src="./imagens/user-pessoal.png">
+                        <span>Pessoal</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="conteudo-principal">
+            <div class="dia-atual">
+                <h1>Hoje</h1>
+                <span data-atual="on"></span>
+            </div>
+            <div class="criar-tarefa" id="criar-tarefa">
+                <div class="div-form1">
+                    <form id="todolist" action="">
+                        <label for="tarefa">Descrição</label>
+                        <input type="text"class="text" id="tarefa" name="tarefa" placeholder="O que você vai fazer?">
+                        <label for="prazo">Data</label>
+                        <input type="date" class="date" id="prazo" name="prazo" placeholder="dd/mm/aaaa">
+                        <label for="tipo">Tipo</label>
+                        <select id="tipo" name="tipo">
+                            <option value="Rotina">Rotina</option>
+                            <option value="Pessoal">Pessoal</option>
+                        </select>
+                        <label for="status">Status</label>
+                        <select id="status" name="status">
+                            <option value="Pendente">Pendente</option>
+                            <option value="Realizado">Realizado</option>
+                        </select>
+                        <div class="div-buttons">
+                            <button class="add-tarefa">Adicionar Tarefa</button>
+                            <span class="error">*Preencha os campos de Descrição e Data</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tarefas-criadas">
+                <div class="div-table">
+                    
+                </div>
+            </div>
+            <div class="editar-tarefa">
+                <div class="darker" data-modal="on"></div>
+                <div class="modal" data-modal="on">
+                    <h2>Editar sua tarefa</h2>
+                    <label for="tarefa-edit">Descrição</label>
+                        <form action="" name="formEditar">
+                            <input type="text" class="text" id="tarefa-edit" name="tarefas" placeholder="O que você vai fazer?">
+                            <label for="prazo-edit">Data</label>
+                            <input type="date" class="date" id="prazo-edit" name="prazo" placeholder="dd/mm/aaaa">
+                            <label for="tipo-edit">Tipo</label>
+                            <select id="tipo-edit" name="tipo">
+                                <option value="Rotina">Rotina</option>
+                                <option value="Pessoal">Pessoal</option>
+                            </select>
+                            <label for="status-edit">Status</label>
+                            <select id="status-edit" name="status">
+                                <option value="Pendente">Pendente</option>
+                                <option value="Realizado">Realizado</option>
+                            </select>
+                        </form>
+                        <div class="div-buttons">
+                            <button class="add-tarefa button-edit">Editar Tarefa</button>
+                            <button class="add-tarefa button-edit-cancel close">Cancelar</button>
+                        </div>
+                        <button class="close" data-modal="fechar">x</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="animacao">
+            <div class="div-logo">
+                <h1>ToDoList - Lista de Tarefas</h1>
+                <img src="./imagens/logo.png" class="logo">
+            </div>
+        </div>
+        <p> &copy; 2024 - Feito por Fabio Henrique |<a href="" target="_blank">Avalie o repositório no GitHub </a></p>
+    </footer>
+    <script type="module" src="./script/script.js"></script>
+    <!--COLOCAR NO FOOTER<a href="https://www.flaticon.com/free-icons/more" title="more icons">More icons created by Icon Smart - Flaticon</a>-->
+</body>
+</html>

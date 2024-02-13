@@ -1,0 +1,54 @@
+footer{
+    position: relative;
+    bottom: 0;
+    margin-top: 10rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgb(104, 248, 111) 44%, rgb(90, 240, 76) 100%);
+    color: #0c0000;
+    font-weight: bolder;
+    box-shadow: 0 0 0.2rem 0.1rem rgb(16, 223, 16);
+    padding: .5rem;
+    display: flex;
+}
+footer p{
+    margin-left: auto;
+    margin-right: auto;
+}
+.div-logo{
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 5rem;
+}
+.animacao{
+    width: 16rem;
+    height: 2rem;
+}
+.animacao:hover .div-logo{/*animacao logo*/
+    animation: anima-logo .3s none;
+}
+.div-logo h1{
+    font-size: 1.2rem;
+}
+.logo{
+    height: 20px;
+    width: 20px;
+    margin-left: .3rem;
+}
+footer a{
+    text-decoration: none;
+    margin-left: .3rem;
+    color: #fff;
+}
+footer a:hover{
+    border-bottom: 1px solid #fff;
+}
+/*dark mode*/
+body.ativo footer{
+    background: linear-gradient(90deg, rgba(211, 211, 211, 0.925) 44%, rgb(0, 0, 0) 100%);
+}
+/*animacoes*/
+@keyframes anima-logo{
+    33%{transform: rotate(-15deg);}
+    100%{transform: rotate(0);}
+}
